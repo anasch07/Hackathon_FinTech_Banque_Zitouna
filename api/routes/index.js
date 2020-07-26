@@ -1,64 +1,363 @@
 const express = require('express');
+const Sequelize = require('sequelize');
+const User = require('../models').User;
+const Account = require('../models').Account;
+const Credit = require('../models').Credit;
+const Transaction = require('../models').Transaction;
 const { check, validationResult } = require('express-validator/check');
+const bcryptjs = require('bcryptjs');
+const auth = require('basic-auth');
 const colors = require('colors/safe');
 const router = express.Router();
-const nodemailer = require('nodemailer');
-router.post('/send', (req, res) => {
-  if(req.body.firstName==""|| req.body.lastName==""){
-   console.log("must not empty")
-  }else{
 
-    const output = `
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-    <html><body>
-      <p>thanks for being a client for Mybosphorus</p>
-      <h3>Your order summary</h3>
-      <ul>  
-        <li> first Name: ${req.body.firstName}</li>
-        <li>last Name: ${req.body.lastName}</li>
-        <li>Company: ${req.body.company}</li>
-        <li>Email: ${req.body.email}</li>
-        <li>Phone: ${req.body.phone}</li>
-        <li><a href="${req.body.linkk}"> download the invoice</a>
-      </ul>
-      </body></html>
-      `;
-      
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: 'mail.virtualentrepreneursassociation.org',
-    port: 25,
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: 'aaron.tardos@virtualentrepreneursassociation.org', // generated ethereal user
-        pass: 'Qsdf12300'  // generated ethereal password
-    },
-    tls:{
-      rejectUnauthorized:false
+function asyncHandler(cb){
+    return async(req, res, next) => {
+      try {
+        await cb(req, res, next)
+      } catch(error){
+        res.status(500).send(error);
+      }
+    }
+}
+router.get('/',(req,res,next)=>{
+    res.json({
+        message:"hello into the api route"
+    })
+})
+
+const authenticateUser = asyncHandler(async(req, res, next) => {
+    let message = null;
+    const utilisateurs = await User.findAll({
+      attributes: { exclude: ['createdAt','updatedAt'] }
+
+    });
+    // Get the user's credentials from the Authorization header.
+    const credentials = auth(req);
+    if (credentials) {
+      // Look for a user whose `username` matches the credentials `name` property.
+      const user = utilisateurs.find(u => u.emailAddress === credentials.name);
+       
+      if (user) {
+        const authenticated = bcryptjs
+          .compareSync(credentials.pass, user.password);
+        if (authenticated) {
+          console.log(`Authentication successful for username: ${user}`);
+  
+          // Store the user on the Request object.
+          req.currentUser = user;
+        } else {
+          message = `Authentication failure for username: ${user.username}`;
+        }
+      } else {
+        message = `User not found for username: ${credentials.name}`;
+      }
+    } else {
+      message = 'Auth header not found';
+    }
+  
+    if (message) {
+      console.warn(message);
+      res.status(401).json({ message: 'Access Denied' });
+    } else {
+      next();
     }
   });
+ 
+ 
+router.get('/users',authenticateUser, asyncHandler(async (req, res,next) => {
+    const user = req.currentUser;
+    res.json({
+       id:user.id,
+       firstName:user.firstName,
+       lastName:user.lastName,
+       emailAddress:user.emailAddress,
+      
+        
+      });
+      return res.status(200).end();
 
-  // setup email data with unicode symbols
-  let mailOptions = {
-      from: '"Nodemailer Contact" <your@email.com>', // sender address
-      to: 'hfaidhmoukim@gmail.com', // list of receivers
-      subject: 'Node Contact Request', // Subject line
-      html: output // html body
-  };
+  }));
 
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return console.log(error);
+    router.post('/users', [
+        check('emailSignup')
+          .exists({ checkNull: true, checkFalsy: true })
+          .withMessage('Please provide a value for "emailAddress"'),
+           check('passwordSignup')
+          .exists({ checkNull: true, checkFalsy: true })
+          .withMessage('Please provide a value for "password"'),
+      ], asyncHandler(async (req,res,next)=>{
+        try{
+        // Attempt to get the validation result from the Request object.
+        const errors = validationResult(req);
+      
+        // If there are validation errors...
+        if (!errors.isEmpty()) {
+          // Use the Array `map()` method to get a list of error messages.
+          const errorMessages = errors.array().map(error => error.msg);
+      
+          // Return the validation errors to the client.
+          return res.status(400).json({ errors: errorMessages });
+        }
+  // Get the user from the request body.
+  // Hash the new user's password.
+  user.password = bcryptjs.hashSync(user.password);
+    const newUser =User.build({ 
+        emailAddress: req.body.emailAddress,
+        password: req.body.password,
+    });
+    
+    await newUser.save();
+
+     res.status(201).end();
+    }catch(e) {
+      const messages = {};
+     console.log(e.errors)
+          e.errors.forEach((error) => {
+              let message;
+              switch (error.validatorKey) {
+                  case 'isEmail':
+                      message = 'Please enter a valid email';
+                      break;
+                  case 'is_null':
+                      message = 'Please complete this field';
+                      break;
+                  case 'not_unique':
+                      message = error.value + ' is taken. Please choose another one';
+                      error.path = error.path.replace("_UNIQUE", "");
+              }
+              console.log(error.path)
+              messages[error.path] = message;
+          });
+          res.status(400).json({message:messages})
       }
-      console.log('Message sent: %s', info.messageId);   
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+  
+  }));
+
+
+  router.get('/courses',asyncHandler(async (req,res,next)=>{
+    // const courses =  await Course.findAll({});
+    const courses = await Account.findAll({
+      attributes: { exclude: ['createdAt','updatedAt'] },
+        include: [
+          {
+            model: User,
+            
+            attributes: { exclude: ['password','createdAt','updatedAt'] }
+          }
+        ]
+      })
+    
+    res.json({
+     courses,
+     
+      });
+       res.status(200).end();
+
+
+  }));
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  router.post('/client', [
+    check('firstName')
+      .exists({ checkNull: true, checkFalsy: true })
+      .withMessage('Please provide a value for "firstName"'),
+    check('lastName')
+      .exists({ checkNull: true, checkFalsy: true })
+      .withMessage('Please provide a value for "lastName"'),
+    check('emailAddress')
+      .exists({ checkNull: true, checkFalsy: true })
+      .withMessage('Please provide a value for "password"'),
+      
+  ], asyncHandler(async (req,res,next)=>{
+    try{
+    // Attempt to get the validation result from the Request object.
+    const errors = validationResult(req);
+  
+    // If there are validation errors...
+    if (!errors.isEmpty()) {
+      // Use the Array `map()` method to get a list of error messages.
+      const errorMessages = errors.array().map(error => error.msg);
+  
+      // Return the validation errors to the client.
+      return res.status(400).json({ errors: errorMessages });
+    }
+// Get the user from the request body.
+const client = req.body;
+// Hash the new user's password.
+const newClient =Account.build({ 
+  firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    emailAddress: req.body.emailAddress,
+    tel:req.body.tel,
+    address:req.body.address,
+    balence:req.body.balence,
 
   });
+
+await newClient.save();
+res.location('/')
+console.log(res.location)
+
+ res.status(201).end();
+}catch(e) {
+  const messages = {};
+ console.log(e.errors)
+      e.errors.forEach((error) => {
+          let message;
+          switch (error.validatorKey) {
+              case 'isEmail':
+                  message = 'Please enter a valid email';
+                  break;
+              case 'is_null':
+                  message = 'Please complete this field';
+                  break;
+              case 'not_unique':
+                  message = error.value + ' is taken. Please choose another one';
+                  error.path = error.path.replace("_UNIQUE", "");
+          }
+          console.log(error.path)
+          messages[error.path] = message;
+      });
+      res.status(400).json({message:messages})
   }
 
+}));
 
-  });
+
+router.post('/credit/client/:id', [
+  check('amount')
+    .exists({ checkNull: true, checkFalsy: true })
+    .withMessage('Please provide a value for "amount"'),
+  check('nbrMonths')
+    .exists({ checkNull: true, checkFalsy: true })
+    .withMessage('Please provide a value for "nbrMonths"'),
+  check('paidAmount')
+    .exists({ checkNull: true, checkFalsy: true })
+    .withMessage('Please provide a value for "paidAmount"'),
+    
+], asyncHandler(async (req,res,next)=>{
+  try{
+  // Attempt to get the validation result from the Request object.
+  const errors = validationResult(req);
+
+  // If there are validation errors...
+  if (!errors.isEmpty()) {
+    // Use the Array `map()` method to get a list of error messages.
+    const errorMessages = errors.array().map(error => error.msg);
+
+    // Return the validation errors to the client.
+    return res.status(400).json({ errors: errorMessages });
+  }
+// Get the user from the request body.
+const client = req.body;
+// Hash the new user's password.
+let date = new Date();
+let year = date.getFullYear();
+const newClient =Credit.build({ firstName: req.body.firstName,
+  amount: client.amount,
+  nbrMonths: client.nbrMonths,
+  paidAmount:client.paidAmount,
+  date:year,
+  state:client.state,
+
+});
+
+await newClient.save();
+res.location('/')
+console.log(res.location)
+
+res.status(201).end();
+}catch(e) {
+const messages = {};
+console.log(e.errors)
+    e.errors.forEach((error) => {
+        let message;
+        switch (error.validatorKey) {
+            case 'isEmail':
+                message = 'Please enter a valid email';
+                break;
+            case 'is_null':
+                message = 'Please complete this field';
+                break;
+            case 'not_unique':
+                message = error.value + ' is taken. Please choose another one';
+                error.path = error.path.replace("_UNIQUE", "");
+        }
+        console.log(error.path)
+        messages[error.path] = message;
+    });
+    res.status(400).json({message:messages})
+}
+
+}));
+
+
+
+
+router.post('/transaction/:idd', asyncHandler(async (req,res,next)=>{
+  try{
+  
+const newTransaction =Transaction.build({
+  date: req.body.date,
+  type: req.body.type,
+  montant: req.body.amount,
+  AccountId:req.params.idd
+});
+
+await newTransaction.save();
+res.status(201).end();
+}catch(e) {
+const messages = {};
+console.log(e.errors)
+    e.errors.forEach((error) => {
+        let message;
+      
+        console.log(error.path)
+        messages[error.path] = message;
+    });
+    res.status(400).json({message:messages})
+}
+}));
+
+router.get('/clients/:id',asyncHandler(async (req,res,next)=>{
+  const client =  await Account.findOne({
+    attributes: { exclude: ['createdAt','updatedAt'] },
+      where:{
+          id:req.params.id
+      }
+     });
+  
+         
+    
+    if(client!=null){
+    
+          res.json({
+          client
+          
+          })
+         
+      }
+    else {
+
+      res.status(404).json({message: "Course not found."});
+}
+}));
 
 
   module.exports = router;

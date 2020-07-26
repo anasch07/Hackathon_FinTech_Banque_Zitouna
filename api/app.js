@@ -1,10 +1,9 @@
 'use strict';
+
 // load modules
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
-const nodemailer = require('nodemailer');
+const sequelize = require('./models').sequelize;
 const routes = require('./routes');
 const cors = require('cors')
 // variable to enable global error logging
@@ -13,11 +12,6 @@ const enableGlobalErrorLogging = process.env.ENABLE_GLOBAL_ERROR_LOGGING === 'tr
 // create the Express app
 const app = express();
 app.use(cors());
-app.engine('handlebars',exphbs());
-app.set('view engine','handlebars');
-
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
 // setup morgan which gives us http request logging
 app.use(morgan('dev'));
 app.use(express.json());
@@ -60,3 +54,12 @@ app.use((err, req, res, next) => {
     console.log(`Express server is listening on port ${server.address().port}`);
   });
   
+  sequelize.sync(function(){
+    if(sequelize.authentificate()){
+      console.log('database connection established successfully ');
+
+    } 
+    else{
+      console.log('database not connected')
+    }
+});
