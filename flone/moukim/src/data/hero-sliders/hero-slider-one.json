@@ -1,0 +1,28 @@
+[{
+        "id": 1,
+        "title": "Tamouil",
+        "subtitle": "La facilité d'achat",
+        "image": "/assets/img/slider/single-slide-1.png",
+        "url": "/shop-grid-standard"
+    },
+    {
+        "id": 2,
+        "title": "Tamouil Sayara",
+        "subtitle": "Vous souhaitez acheter une nouvelle voiture, acheter une premiére voiture à votre enfant ? Vous cherchez des solutions de financement adéquates ? Banque Zitouna, la Banque Islamique Tunisienne, vous aide à les réaliser et vous facilite l’achat de la voiture dont vous rêvez en vous proposant «Tamouil Sayara» conformément aux principes de la Finance Islamique.",
+        "image": "/assets/img/slider/car.png",
+        "url": "/shop-grid-standard"
+    }, {
+        "id": 3,
+        "title": "Tamouil Menzel",
+        "subtitle": "",
+        "image": "/assets/img/slider/home.png",
+        "url": "/shop-grid-standard"
+    }, {
+        "id": 4,
+        "title": "Tamouil Rahalet",
+        "subtitle": "",
+        "image": "/assets/img/slider/travel.png",
+        "url": "/shop-grid-standard"
+    }
+
+]
