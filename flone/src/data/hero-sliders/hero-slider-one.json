@@ -1,0 +1,28 @@
+[{
+        "id": 1,
+        "title": "Tamouil",
+        "subtitle": "La facilité d'achat",
+        "image": "/assets/img/slider/single-slide-1.png",
+        "url": "/shop-grid-standard"
+    },
+    {
+        "id": 2,
+        "title": "Tamouil Sayara",
+        "subtitle": "Vous souhaitez acheter une nouvelle voiture, Vous cherchez des solutions de financement adéquates ? Banque Zitouna, la Banque Islamique Tunisienne, vous aide à les réaliser et vous facilite l’achat de la voiture dont vous rêvez en vous proposant «Tamouil Sayara» conformément aux principes de la Finance Islamique.",
+        "image": "/assets/img/slider/car.png",
+        "url": "/shop-grid-standard"
+    }, {
+        "id": 3,
+        "title": "Tamouil Menzel",
+        "subtitle": "Vous souhaitez devenir propriétaire d’un appartement, d’une villa ou d’une résidence secondaire? Vous souhaitez acquérir un terrain à usage d'habitation? Vous vous interrogez sur les moyens de financement? Banque Zitouna, la Banque Islamique Tunisienne, vous aide à concrétiser vos projets immobiliers en vous proposant «Tamouil Menzel» conformément aux principes de la Finance Islamique.",
+        "image": "/assets/img/slider/home.png",
+        "url": "/shop-grid-standard"
+    }, {
+        "id": 4,
+        "title": "Tamouil Rahalet",
+        "subtitle": "Vous envisagez de planifier une aventure et bénéficier d’un voyage organisé ? Les coûts vous sont très élevés et vous vous interrogez sur les solutions de financement ?Aujourd’hui, Banque Zitouna une banque avec une nouvelle vision, vous accompagne dans votre quotidien et vous aide à concrétiser vos projets. Banque Zitouna met à votre disposition de nouvelles solutions de financement pour vous faciliter la vie.",
+        "image": "/assets/img/slider/travel.png",
+        "url": "/shop-grid-standard"
+    }
+
+]

@@ -1,0 +1,466 @@
+[
+    {
+        "id": "1",
+        "sku": "asdf123",
+        "name": "HYUNDAI GRAND I10 POPULAIRE",
+        "price": "31429",
+        "discount": 0,
+        "offerEnd": "October 5, 2020 12:11:00",
+        "new": false,
+        "rating": 4,
+        "saleCount": 54,
+        "category": [
+            "4 ch"
+        ],
+        "tag": [
+            "populaire"
+        ],
+        "variation": [
+            {
+                "color": "black",
+                "image": "/assets/img/product/fashion/8.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 4
+                    },
+                    {
+                        "name": "m",
+                        "stock": 7
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 9
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 1
+                    }
+                ]
+            },
+            {
+                "color": "brown",
+                "image": "/assets/img/product/fashion/3.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 1
+                    },
+                    {
+                        "name": "m",
+                        "stock": 2
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 4
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 0
+                    }
+                ]
+            }
+        ],
+        "image": [
+            "/assets/img/product/fashion/8.jpg",
+            "/assets/img/product/fashion/8.jpg",
+            "/assets/img/product/fashion/8.jpg",
+            "/assets/img/product/fashion/8.jpg",
+            "/assets/img/product/fashion/8.jpg"
+        ],
+        "shortDescription": "The all-new i10’s versatile boot space is among the best in its class. The lift-in height is 29mm lower than the previous model, making it easier to load luggage into the boot. The capacity expands from 252 litres to 1,046 with seats down.",
+        "fullDescription": "The Hyundai Grand i10 has 1 Petrol Engine on offer. The Petrol engine is 1197 cc. It is available with the Manual transmission. Depending upon the variant and fuel type the Grand i10 has a mileage of 18.9 kmpl. The Grand i10 is a 5 seater Hatchback and has a length of 3765mm, width of 1660mm and a wheelbase of 2425mm."
+    },
+    {
+        "id": "2",
+        "sku": "asdf124",
+        "name": "SUZUKI CELERIO POPULAIRE",
+        "price": 26000,
+        "discount": 0,
+        "new": false,
+        "rating": 3,
+        "saleCount": 12,
+        "category": [
+            "5ch"
+        ],
+        "tag": [
+            "populaire"
+        ],
+        "variation": [
+            {
+                "color": "blue",
+                "image": "/assets/img/product/fashion/2.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 6
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 7
+                    }
+                ]
+            },
+            {
+                "color": "brown",
+                "image": "/assets/img/product/fashion/4.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 4
+                    },
+                    {
+                        "name": "m",
+                        "stock": 8
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 3
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 7
+                    }
+                ]
+            },
+            {
+                "color": "black",
+                "image": "/assets/img/product/fashion/5.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 7
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 0
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 7
+                    }
+                ]
+            }
+        ],
+        "image": [
+            "/assets/img/product/fashion/2.jpg",
+            "/assets/img/product/fashion/2.jpg",
+            "/assets/img/product/fashion/2.jpg",
+            "/assets/img/product/fashion/2.jpg",
+            "/assets/img/product/fashion/2.jpg"
+        ],
+        "shortDescription": "Que ce soit dans le siège du conducteur ou simplement en cours de route, sachez que vous êtes entre de bonnes mains avec la Celerio. Les scores des principales fonctionnalités de sécurité lors des crash-tests sont performants malgré sa taille.",
+        "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+    },
+    {
+        "id": "3",
+        "sku": "asdf125",
+        "name": "Voyage à Paris",
+        "price": 3000,
+        "discount": 10,
+        "offerEnd": "December 2, 2020 12:11:00",
+        "new": true,
+        "rating": 5,
+        "saleCount": 36,
+        "category": [
+            "All inclusive",
+            "half board formula"
+        ],
+        "tag": [],
+        "variation": [
+            {
+            
+                "image": "/assets/img/product/fashion/1.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 2
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 5
+                    }
+                ]
+            },
+            {
+                
+                "image": "/assets/img/product/fashion/1.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 4
+                    },
+                    {
+                        "name": "m",
+                        "stock": 7
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 9
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 1
+                    }
+                ]
+            },
+            {
+                
+                "image": "/assets/img/product/fashion/1.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 1
+                    },
+                    {
+                        "name": "m",
+                        "stock": 2
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 4
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 0
+                    }
+                ]
+            }
+        ],
+        "image": [
+            "/assets/img/product/fashion/1.jpg",
+            "/assets/img/product/fashion/1.jpg",
+            "/assets/img/product/fashion/1.jpg",
+            "/assets/img/product/fashion/1.jpg",
+            "/assets/img/product/fashion/1  .jpg"
+        ],
+        "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+    },
+    {
+        "id": "4",
+        "sku": "asdf126",
+        "name": "Prothese dentaire(Khadamet Sehheya)",
+        "price": 32513,
+        "discount": 5,
+        "new": true,
+        "rating": 4,
+        "saleCount": 20,
+        "category": [],
+        "tag": [],
+        "variation": [
+            {
+                
+                "image": "/assets/img/product/fashion/3.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 6
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 7
+                    }
+                ]
+            },
+            {
+                
+                "image": "/assets/img/product/fashion/3.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 4
+                    },
+                    {
+                        "name": "m",
+                        "stock": 8
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 3
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 7
+                    }
+                ]
+            },
+            {
+                
+                "image": "/assets/img/product/fashion/3.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 7
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 0
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 7
+                    }
+                ]
+            }
+        ],
+        "image": [
+            "/assets/img/product/fashion/3.jpg",
+            "/assets/img/product/fashion/3.jpg",
+            "/assets/img/product/fashion/3.jpg",
+            "/assets/img/product/fashion/3.jpg",
+            "/assets/img/product/fashion/3.jpg"
+        ],
+        "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+    },
+    {
+        "id": "5",
+        "sku": "asdf127",
+        "name": "Appartement s+3 à Ezzahra",
+        "price": 380000,
+        "discount": 10,
+        "new": true,
+        "rating": 5,
+        "saleCount": 25,
+        "category": [],
+        "tag": [],
+        "variation": [
+            {
+                "image": "/assets/img/product/fashion/4.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 6
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 7
+                    }
+                ]
+            },
+            {
+                "image": "/assets/img/product/fashion/4.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 4
+                    },
+                    {
+                        "name": "m",
+                        "stock": 8
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 3
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 7
+                    }
+                ]
+            },
+            {
+                "image": "/assets/img/product/fashion/4.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 3
+                    },
+                    {
+                        "name": "m",
+                        "stock": 7
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 0
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 7
+                    }
+                ]
+            }
+        ],
+        "image": [
+            "/assets/img/product/fashion/4.jpg",
+            "/assets/img/product/fashion/4.jpg",
+            "/assets/img/product/fashion/4.jpg",
+            "/assets/img/product/fashion/4.jpg",
+            "/assets/img/product/fashion/4.jpg"
+        ],
+        "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+    },
+    {
+        "id": "6",
+        "sku": "asdf128",
+        "name": "SERVEUR TOUR DELL POWEREDGE",
+        "price": 5461,
+        "discount": 5,
+        "offerEnd": "December 17, 2020 12:11:00",
+        "new": true,
+        "rating": 5,
+        "saleCount": 65,
+        "category": [],
+        "tag": [],
+        "variation": [
+            {
+
+                "image": "/assets/img/product/fashion/5.jpg",
+                "image": "/assets/img/product/fashion/5.jpg",
+                "size": [
+                    {
+                        "name": "x",
+                        "stock": 1
+                    },
+                    {
+                        "name": "m",
+                        "stock": 2
+                    },
+                    {
+                        "name": "xl",
+                        "stock": 4
+                    },
+                    {
+                        "name": "xxl",
+                        "stock": 0
+                    }
+                ]
+            }
+        ],
+        "image": [
+            "/assets/img/product/fashion/5.jpg",
+            "/assets/img/product/fashion/5.jpg",
+            "/assets/img/product/fashion/5.jpg",
+            "/assets/img/product/fashion/5.jpg",
+            "/assets/img/product/fashion/5.jpg"
+        ],
+        "shortDescription": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        "fullDescription": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+    }
+]

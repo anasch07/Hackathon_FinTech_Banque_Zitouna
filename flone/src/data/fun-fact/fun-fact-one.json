@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "iconClass": "pe-7s-portfolio",
+    "countNum": 339525,
+    "title": "Comptes clients"
+  },
+  {
+    "id": "2",
+    "iconClass": "pe-7s-cup",
+    "countNum": 2829,
+    "title": "Dépôts de Clientèle(MD)"
+  },
+  {
+    "id": "3",
+    "iconClass": "pe-7s-light",
+    "countNum": 2477,
+    "title": "Créances sur la Clientèle (MD)"
+  },
+  {
+    "id": "4",
+    "iconClass": "pe-7s-smile",
+    "countNum": 266,
+    "title": "Capitaux Propres (MD)"
+  }
+]

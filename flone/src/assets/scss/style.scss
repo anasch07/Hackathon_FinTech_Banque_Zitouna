@@ -1,0 +1,82 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~swiper/css/swiper.css';
+@import '~animate.css/animate.min.css';
+@import '~lightgallery.js/dist/css/lightgallery.css';
+@import '~react-modal-video/scss/modal-video.scss';
+@import '../css/icons.min.css';
+@import 'variables';
+@import 'helper';
+@import 'common';
+@import 'preloader';
+@import 'header';
+@import 'slider';
+@import 'support';
+@import 'section-title';
+@import 'product';
+@import 'blog';
+@import 'footer';
+@import 'banner';
+@import 'suscribe';
+@import 'about';
+@import 'image-slider';
+@import 'testimonial';
+@import 'brand-logo';
+@import 'timers';
+@import 'breadcrumb';
+@import 'sidebar';
+@import 'shop';
+@import 'product-details';
+@import 'cart';
+@import 'compare';
+@import 'checkout';
+@import 'contact';
+@import 'blog-details';
+@import 'login-register';
+@import 'my-account';
+@import '404';
+@import 'video-popup';
+.logo {
+  margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: rgba(76, 161, 175, 1);
+}
+div.ltContainer {
+  display: flex;
+  text-align: center;
+  width: 75%;
+  margin-left: 12.5%;
+  div {
+    display: flex;
+    width: 45%;
+    &:first-child {
+      margin-right: 2.5%;
+    }
+    &:last-child {
+      margin-left: 2.5%;
+    }
+    div {
+      text-align: center;
+    }
+    div:first-child {
+      width: 20%;
+    }
+    div:last-child {
+      padding-top: 15px;
+      width: 80%;
+    }
+    input[name='lt'] {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+.ngtv {
+  margin-right: -25px;
+}
